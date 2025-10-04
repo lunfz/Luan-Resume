@@ -25,7 +25,7 @@ body{
 }
 .skip-link:focus{left:12px;top:12px;width:auto;height:auto;padding:8px;background:#fff;color:#000;border-radius:6px}
 
-.site-header{max-width:1000px;margin:0 auto}
+.site-header{max-width:1400px;margin:0 auto}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 4px}
 .brand h1{margin:0;font-size:20px}
 .brand-sub{margin:0;font-size:12px;color:var(--muted)}
@@ -34,17 +34,19 @@ body{
 .nav-links a:hover,.nav-links a:focus{background:var(--glass);color:var(--accent);outline:none}
 
 .hero{background:linear-gradient(90deg, rgba(124,58,237,0.12), rgba(2,6,23,0.2));padding:30px;border-radius:var(--radius);margin-top:8px}
-.hero-inner{max-width:900px;margin:0 auto;text-align:center}
+.hero-inner{max-width:900px;margin:0;padding-left:8px;text-align:left}
 .hero h2{font-size:28px;margin:0 0 8px}
 .hero p{color:var(--muted);margin:0 0 16px}
 .cta{display:inline-block;background:var(--accent);color:white;padding:10px 16px;border-radius:10px;text-decoration:none}
 .cta:focus{outline:3px solid rgba(124,58,237,0.25)}
 
-main{max-width:1000px;margin:28px auto;display:grid;grid-template-columns:1fr;gap:18px}
+main{max-width:1400px;margin:28px auto;display:grid;grid-template-columns:1fr;gap:18px}
 .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
 
 #skills ul{list-style:none;padding:0;margin:12px 0;display:flex;flex-wrap:wrap;gap:10px}
-#skills li{background:#0b1524;color:var(--muted);padding:8px 12px;border-radius:999px;font-weight:600}
+#skills .skills-list{list-style:none;padding:0;margin:12px 0;display:flex;flex-wrap:wrap;gap:10px}
+#skills .skill-item{background:#0b1524;color:var(--muted);padding:10px 14px;border-radius:999px;font-weight:700;display:flex;align-items:center;gap:10px}
+.skill-level{background:rgba(255,255,255,0.03);color:var(--muted);padding:4px 8px;border-radius:8px;font-size:12px;font-weight:700}
 
 .muted{color:var(--muted);font-size:14px}
 
@@ -58,7 +60,10 @@ main{max-width:1000px;margin:28px auto;display:grid;grid-template-columns:1fr;ga
 .site-footer{max-width:1000px;margin:28px auto;text-align:center;color:var(--muted);font-size:14px}
 
 @media(min-width:800px){
-  main{grid-template-columns:2fr 3fr}
+  /* deixar a coluna principal maior e a lateral menor */
+  main{grid-template-columns:3fr 1fr}
+  /* certificações devem ocupar as duas colunas para não ficarem espremidas */
+  #certifications{grid-column:1 / -1}
   .hero-inner{text-align:left}
 }
 
@@ -88,10 +93,10 @@ main{max-width:1000px;margin:28px auto;display:grid;grid-template-columns:1fr;ga
 }
 
 /* Carousel horizontal para andamento */
-.cert-carousel{display:flex;gap:14px;overflow-x:auto;padding:8px 4px;scroll-snap-type:x mandatory}
+.cert-carousel{display:flex;gap:18px;overflow-x:auto;padding:12px 6px;scroll-snap-type:x mandatory;align-items:stretch}
 .cert-carousel::-webkit-scrollbar{height:8px}
 .cert-carousel::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.06);border-radius:8px}
-.cert-card{min-width:260px;max-width:320px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:12px;border-radius:12px;display:flex;flex-direction:column;gap:8px;scroll-snap-align:start}
+.cert-card{min-width:360px;max-width:520px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:16px;border-radius:12px;display:flex;flex-direction:column;gap:10px;scroll-snap-align:start}
 .cert-card .card-top{display:flex;align-items:center;gap:10px}
 .cert-card .cert-title{font-weight:800;color:#eaf2ff}
 .cert-mini-bar{height:10px;background:rgba(255,255,255,0.03);border-radius:8px;overflow:hidden}
