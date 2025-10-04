@@ -44,7 +44,7 @@ body{
 .main-tight {
   max-width:1400px;margin:18px auto;display:grid;grid-template-columns:1fr;gap:10px;align-items:start
 }
-main{max-width:1400px;margin:28px auto;display:grid;grid-template-columns:1fr;gap:18px;align-items:start}
+main{max-width:1400px;margin:28px auto;display:grid;grid-template-columns:1fr;gap:10px;align-items:start}
 .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
 
 #skills ul{list-style:none;padding:0;margin:12px 0;display:flex;flex-wrap:wrap;gap:10px}
@@ -87,12 +87,9 @@ main{max-width:1400px;margin:28px auto;display:grid;grid-template-columns:1fr;ga
 
 .muted{color:var(--muted);font-size:14px}
 
-.progress-bar{background:rgba(255,255,255,0.03);border-radius:12px;margin-bottom:12px;width:100%;height:36px;overflow:hidden;display:flex;align-items:center}
-.progress-bar-inner{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:flex-end;padding:0 12px;color:#fff;font-weight:700;transition:width 900ms cubic-bezier(.2,.9,.2,1);box-shadow: inset 0 0 6px rgba(0,0,0,0.3);}
-
-/* badge da certificação */
-.cert-badge{width:40px;height:40px;object-fit:contain;margin-right:10px;border-radius:6px}
-.progress-label{font-size:13px;margin-right:auto;padding-left:12px;color:var(--muted);font-weight:600}
+/* Regras de barras de progresso removidas: o layout agora não exibe elementos de andamento dinâmico.
+  Se você quiser restaurar o visual de progresso no futuro, remova este comentário e
+  recupere as regras anteriores para .progress-bar, .progress-bar-inner, .progress-item, etc. */
 
 .site-footer{max-width:1000px;margin:28px auto;text-align:center;color:var(--muted);font-size:14px}
 
@@ -100,20 +97,34 @@ main{max-width:1400px;margin:28px auto;display:grid;grid-template-columns:1fr;ga
 .footer-social{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.03);text-decoration:none}
 .footer-social svg{display:block}
 
-/* opcional: puxar levemente a área de certificações e soft-skills para cima para reduzir espaço */
-#certifications{margin-top:-8px}
-.soft-card{margin-top:-6px}
-/* puxar cursos mais para cima em telas médias/grandes */
-#courses{margin-top:-90px}
+/* ajustamentos de espaçamento */
+#certifications{margin-top:0}
+.soft-card{margin-top:0}
+/* make courses a bit more compact so footer moves up */
+#courses{margin-top:0;min-height:120px;display:block}
+.card h2{margin-bottom:12px}
+.courses-wrap{display:flex;align-items:flex-start;justify-content:flex-start;flex-wrap:wrap;width:100%;padding:6px}
 
 @media(min-width:800px){
-  /* deixar a coluna principal maior e a lateral menor */
-  main{grid-template-columns:3fr 1fr}
-  /* certificações devem ocupar as duas colunas para não ficarem espremidas */
-  /* colocar o bloco de certificações apenas na coluna principal (esquerda)
-     para que as barras fiquem coladas ao espaço em branco ao lado das soft-skills */
-  #certifications{grid-column:1 / 2}
+  /* grid com áreas para posicionar visualmente os blocos sem mudar o DOM */
+  main{grid-template-columns:3fr 1fr;grid-template-areas:"skills soft" "courses soft";gap:16px}
+  #skills{grid-area:skills}
+  #courses{grid-area:courses;grid-column:1/2}
+  #soft-skills{grid-area:soft}
   .hero-inner{text-align:left}
+  /* ensure courses content starts at the top of the card (no large empty area) */
+  #courses .courses-wrap{display:flex;align-items:flex-start;flex-wrap:wrap}
+  #courses{min-height:0}
+}
+
+@media(max-width:1024px){
+  /* slightly smaller on medium screens */
+  #courses{min-height:140px}
+}
+
+@media(max-width:720px){
+  #courses{min-height:120px}
+  .courses-wrap{align-items:flex-start}
 }
 
 @media(max-width:420px){
@@ -152,32 +163,22 @@ main{max-width:1400px;margin:28px auto;display:grid;grid-template-columns:1fr;ga
 
 /* Certificações grid */
 .cert-grid{display:flex;gap:18px;align-items:flex-start;margin-top:12px}
-.cert-grid #progress-container{flex:2}
 .cert-extra{flex:1;background:rgba(255,255,255,0.01);padding:12px;border-radius:10px}
-.card h2{font-size:20px}
+.card h2{font-size:20px;text-align:left;margin:0 0 8px}
+
+.card{padding:14px}
 
 @media(max-width:900px){
   .cert-grid{flex-direction:column}
 }
 
-/* Vertical stacked progress list to fill empty space */
-.progress-list{display:flex;flex-direction:column;gap:12px;padding:6px 4px}
-.progress-item{display:flex;flex-direction:column;gap:8px;padding:8px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005))}
-.progress-item .progress-label{font-weight:800;color:#eaf2ff}
-.progress-bar{background:rgba(255,255,255,0.03);border-radius:12px;margin:0;width:100%;height:36px;overflow:hidden;display:flex;align-items:center}
-.progress-bar-inner{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:flex-end;padding:0 12px;color:#fff;font-weight:700;transition:width 900ms cubic-bezier(.2,.9,.2,1);box-shadow: inset 0 0 6px rgba(0,0,0,0.3)}
-.progress-item .cert-badge{width:40px;height:40px;object-fit:contain;margin-bottom:6px;border-radius:6px}
-.progress-item .percent{font-weight:700;color:var(--muted);font-size:13px;margin-left:8px}
-
-@media(max-width:420px){
-  /* compact behavior on small screens */
-  .progress-item{padding:6px}
-}
+/* removed progress container styles as progress UI was taken out */
 
 /* Courses list styling */
 .courses-wrap{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:12px;border-radius:10px}
 .courses-list{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
-.courses-list li{background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:10px;color:var(--muted);font-weight:700;min-width:220px;flex:1 1 220px}
+.courses-list li{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:10px;color:var(--muted);font-weight:700;min-width:150px;flex:1 1 150px}
+#skills{border-bottom:1px solid rgba(255,255,255,0.03);padding-bottom:12px;margin-bottom:8px}
 
 @media(max-width:720px){
   .courses-list li{min-width:160px;flex:1 1 160px}
