@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{
   --bg:#0f1724;
   --card:#0f1724;
@@ -117,3 +118,119 @@ main{max-width:1400px;margin:28px auto;display:grid;grid-template-columns:1fr;ga
 .modal-close{position:absolute;right:12px;top:10px;background:transparent;border:0;color:var(--muted);font-size:28px;cursor:pointer}
 .modal h3{margin:0 0 8px}
 .modal p{margin:0;color:var(--muted);line-height:1.4}
+=======
+:root{
+  --bg:#0f1724;
+  --card:#0f1724;
+  --muted:#9fb0c8;
+  --accent:#7c3aed;
+  --surface:#0f1724;
+  --panel:#111827;
+  --radius:12px;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg, #071025 0%, var(--bg) 100%);
+  color: #e6eef6;
+  margin:0;
+  padding:20px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.skip-link{
+  position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{left:12px;top:12px;width:auto;height:auto;padding:8px;background:#fff;color:#000;border-radius:6px}
+
+.site-header{max-width:1000px;margin:0 auto}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 4px}
+.brand h1{margin:0;font-size:20px}
+.brand-sub{margin:0;font-size:12px;color:var(--muted)}
+.nav-links{list-style:none;margin:0;padding:0;display:flex;gap:12px}
+.nav-links a{color:var(--muted);text-decoration:none;padding:8px;border-radius:8px}
+.nav-links a:hover,.nav-links a:focus{background:var(--glass);color:var(--accent);outline:none}
+
+.hero{background:linear-gradient(90deg, rgba(124,58,237,0.12), rgba(2,6,23,0.2));padding:30px;border-radius:var(--radius);margin-top:8px}
+.hero-inner{max-width:900px;margin:0 auto;text-align:center}
+.hero h2{font-size:28px;margin:0 0 8px}
+.hero p{color:var(--muted);margin:0 0 16px}
+.cta{display:inline-block;background:var(--accent);color:white;padding:10px 16px;border-radius:10px;text-decoration:none}
+.cta:focus{outline:3px solid rgba(124,58,237,0.25)}
+
+main{max-width:1000px;margin:28px auto;display:grid;grid-template-columns:1fr;gap:18px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+#skills ul{list-style:none;padding:0;margin:12px 0;display:flex;flex-wrap:wrap;gap:10px}
+#skills li{background:#0b1524;color:var(--muted);padding:8px 12px;border-radius:999px;font-weight:600}
+
+.muted{color:var(--muted);font-size:14px}
+
+.progress-bar{background:rgba(255,255,255,0.03);border-radius:12px;margin-bottom:12px;width:100%;height:36px;overflow:hidden;display:flex;align-items:center}
+.progress-bar-inner{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:flex-end;padding:0 12px;color:#fff;font-weight:700;transition:width 900ms cubic-bezier(.2,.9,.2,1);box-shadow: inset 0 0 6px rgba(0,0,0,0.3);}
+
+/* badge da certificação */
+.cert-badge{width:40px;height:40px;object-fit:contain;margin-right:10px;border-radius:6px}
+.progress-label{font-size:13px;margin-right:auto;padding-left:12px;color:var(--muted);font-weight:600}
+
+.site-footer{max-width:1000px;margin:28px auto;text-align:center;color:var(--muted);font-size:14px}
+
+@media(min-width:800px){
+  main{grid-template-columns:2fr 3fr}
+  .hero-inner{text-align:left}
+}
+
+@media(max-width:420px){
+  .hero h2{font-size:20px}
+  .cta{padding:8px 12px}
+}
+
+/* Social links */
+.social-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.social-btn{background:rgba(255,255,255,0.03);color:var(--muted);padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,0.03)}
+.social-btn:hover,.social-btn:focus{background:var(--accent);color:white;transform:translateY(-2px);box-shadow:0 8px 24px rgba(2,6,23,0.6);outline:none}
+
+@media(max-width:520px){
+  .social-links{flex-direction:column}
+  .social-btn{width:100%;text-align:center}
+}
+
+/* Certificações grid */
+.cert-grid{display:flex;gap:18px;align-items:flex-start;margin-top:12px}
+.cert-grid #progress-container{flex:2}
+.cert-extra{flex:1;background:rgba(255,255,255,0.01);padding:12px;border-radius:10px}
+.card h2{font-size:20px}
+
+@media(max-width:900px){
+  .cert-grid{flex-direction:column}
+}
+
+/* Carousel horizontal para andamento */
+.cert-carousel{display:flex;gap:14px;overflow-x:auto;padding:8px 4px;scroll-snap-type:x mandatory}
+.cert-carousel::-webkit-scrollbar{height:8px}
+.cert-carousel::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.06);border-radius:8px}
+.cert-card{min-width:260px;max-width:320px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:12px;border-radius:12px;display:flex;flex-direction:column;gap:8px;scroll-snap-align:start}
+.cert-card .card-top{display:flex;align-items:center;gap:10px}
+.cert-card .cert-title{font-weight:800;color:#eaf2ff}
+.cert-mini-bar{height:10px;background:rgba(255,255,255,0.03);border-radius:8px;overflow:hidden}
+.cert-mini-bar-inner{height:100%;width:0;background:linear-gradient(90deg,var(--accent),#4f46e5);transition:width 900ms cubic-bezier(.2,.9,.2,1);box-shadow: inset 0 0 6px rgba(0,0,0,0.3)}
+.cert-card .percent{font-weight:700;color:var(--muted);font-size:13px}
+
+@media(max-width:420px){
+  .cert-card{min-width:220px}
+}
+
+/* Modal de certificações */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.modal[aria-hidden="false"]{pointer-events:auto}
+.modal-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.75));backdrop-filter:blur(6px);opacity:0;transition:opacity 220ms}
+.modal[aria-hidden="false"] .modal-overlay{opacity:1}
+.modal-content{position:relative;z-index:10;max-width:720px;width:90%;background:linear-gradient(180deg, rgba(124,58,237,0.08), rgba(255,255,255,0.02));border-radius:12px;padding:20px;color:#eaf2ff;transform:translateY(8px) scale(0.98);opacity:0;transition:opacity 220ms,transform 220ms,box-shadow 220ms;box-shadow:0 12px 40px rgba(2,6,23,0.6)}
+.modal[aria-hidden="false"] .modal-content{opacity:1;transform:translateY(0) scale(1)}
+.modal-close{position:absolute;right:12px;top:10px;background:transparent;border:0;color:var(--muted);font-size:28px;cursor:pointer}
+.modal h3{margin:0 0 8px}
+.modal p{margin:0;color:var(--muted);line-height:1.4}
+>>>>>>> e20b26a96e3a6a8bff3e29dd8957dc352500642a

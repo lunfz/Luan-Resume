@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -78,4 +79,84 @@
 
   <script src="app.js"></script>
 </body>
+=======
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio de lunfz0</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Principal">
+      <div class="brand">
+        <h1>Luan Francisco</h1>
+        <p class="brand-sub">Portfolio & Currículo</p>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certificações</a></li>
+        <li><a href="#social">Redes</a></li>
+      </ul>
+    </nav>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <h2 id="hero-title">Olá — eu sou Luan</h2>
+        <p>Sou Luan, estagiário em infraestrutura de TI com foco em automação, monitoramento e boas práticas de engenharia. Tenho experiência prática em suporte a sistemas, manutenção de servidores e processos de infraestrutura, e estou constantemente aprimorando meus conhecimentos em soluções escaláveis e modernas. Atualmente, estou me preparando para atuar na área de cloud computing, com ênfase em AWS e tecnologias de nuvem, buscando desenvolver habilidades técnicas avançadas e contribuir de forma efetiva em projetos de TI.</p>
+        <a class="cta" href="#certifications">Ver certificações</a>
+      </div>
+    </section>
+  </header>
+
+  <main id="main">
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li>n8n (automação)</li>
+        <li>Cloud (AWS / Google)</li>
+        <li>Cibersegurança</li>
+        <li>Manutenção de PCs</li>
+      </ul>
+    </section>
+
+    <section id="social" class="card">
+      <h2>Redes Sociais</h2>
+      <p class="muted">Me acompanhe nas redes</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/luan-francisco-da-veiga/" target="_blank" rel="noopener" class="social-btn">LinkedIn</a>
+        <a href="https://github.com/lunfz" target="_blank" rel="noopener" class="social-btn">GitHub</a>
+        <a href="https://x.com/lunfz_" target="_blank" rel="noopener" class="social-btn">X / Twitter</a>
+      </div>
+    </section>
+
+    <section id="certifications" class="card">
+      <h2>Andamento das certificações</h2>
+      <div id="progress-container" class="cert-carousel" aria-live="polite">
+        <!-- Os cartões de andamento serão gerados pelo JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Feito por lunfz0</p>
+  </footer>
+
+  <!-- Modal de certificações -->
+  <div id="cert-modal" class="modal" aria-hidden="true">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Fechar" data-close>&times;</button>
+      <h3 id="modal-title">Atualização sobre certificações</h3>
+      <p>Embora ainda não possua certificações relevantes de mercado, estou estudando ativamente para conquistar a AWS CLF-C02 e outras certificações que reforcem minha qualificação na área de cloud computing.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+>>>>>>> e20b26a96e3a6a8bff3e29dd8957dc352500642a
 </html>
