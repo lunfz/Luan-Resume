@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -20,7 +19,6 @@
       <ul class="nav-links">
         <li><a href="#skills">Skills</a></li>
         <li><a href="#certifications">Certificações</a></li>
-        <li><a href="#social">Redes</a></li>
       </ul>
     </nav>
     <section class="hero" aria-labelledby="hero-title">
@@ -39,32 +37,73 @@
         <li class="skill-item">n8n <span class="skill-level">Básico</span></li>
         <li class="skill-item">Cloud (AWS / Google) <span class="skill-level">Básico</span></li>
         <li class="skill-item">Cibersegurança <span class="skill-level">Básico</span></li>
-  <li class="skill-item">Manutenção de computadores <span class="skill-level">Básico / Intermediário</span></li>
-  <li class="skill-item">Linux <span class="skill-level">Básico / Intermediário</span></li>
+        <li class="skill-item">Redes de computadores <span class="skill-level">Básico / Intermediário</span></li>
+        <li class="skill-item">Linux <span class="skill-level">Básico / Intermediário</span></li>
         <li class="skill-item">APIs <span class="skill-level">Básico</span></li>
       </ul>
     </section>
 
-    <section id="social" class="card">
-      <h2>Redes Sociais</h2>
-      <p class="muted">Me acompanhe nas redes</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/luan-francisco-da-veiga/" target="_blank" rel="noopener" class="social-btn">LinkedIn</a>
-        <a href="https://github.com/lunfz" target="_blank" rel="noopener" class="social-btn">GitHub</a>
-        <a href="https://x.com/lunfz_" target="_blank" rel="noopener" class="social-btn">X / Twitter</a>
+    <section id="soft-skills" class="card soft-card">
+      <h2>Soft skills</h2>
+      <ul class="soft-skills">
+        <li>Boa comunicação</li>
+        <li>Vontade de aprendizagem contínua</li>
+        <li>Proatividade</li>
+        <li>Adaptabilidade a mudanças de processos e plataformas</li>
+        <li>Curiosidade técnica e interesse em cloud computing</li>
+        <li>Capacidade de trabalhar em equipe</li>
+        <li>Responsabilidade e comprometimento com tarefas</li>
+        <li>Disposição para ajudar colegas e aprender com eles</li>
+        <li>Flexibilidade para aprender novas ferramentas e tecnologias</li>
+      </ul>
+    </section>
+
+    <section id="courses" class="card">
+      <h2>Cursos realizados</h2>
+      <div class="courses-wrap">
+        <ul class="courses-list">
+          <li>Certificado Profissional de Segurança Cibernética do Google</li>
+          <li>AWS Cloud Practitioner Essentials</li>
+          <li>CISCO - Defesa de Rede</li>
+          <li>Introduction to Network Analysis</li>
+          <li>Fundamentos de DevOps: DevSecOps [Legendado]</li>
+          <li>CISCO - Networking Basics</li>
+          <li>CISCO - Computer Hardware Basics</li>
+          <li>CISCO - Introduction to IoT and Digital Transformation</li>
+          <li>CISCO - Introduction to Cybersecurity</li>
+        </ul>
       </div>
     </section>
 
     <section id="certifications" class="card">
       <h2>Andamento das certificações</h2>
-      <div id="progress-container" class="cert-carousel" aria-live="polite">
-        <!-- Os cartões de andamento serão gerados pelo JS -->
+      <div id="progress-container" class="progress-list" aria-live="polite">
+        <!-- As barras de andamento serão geradas pelo JS (empilhadas verticalmente) -->
       </div>
     </section>
+    <!-- duplicate courses block removed -->
+
+    <!-- social section removed from main; footer keeps the social icons as requested -->
+
+    <!-- removed duplicate certifications block and removed social section per request -->
   </main>
 
   <footer class="site-footer">
     <p>Feito por lunfz0</p>
+    <div class="footer-socials">
+      <a href="https://github.com/lunfz" target="_blank" rel="noopener" class="footer-social" aria-label="GitHub">
+        <!-- GitHub SVG -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.75 5.48.75 11.76c0 4.95 3.2 9.14 7.64 10.62.56.1.76-.24.76-.53 0-.26-.01-1.12-.02-2.03-3.1.67-3.76-1.5-3.76-1.5-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 .72 2.62.51 3.26.39.1-.3.39-.51.71-.63-2.48-.28-5.09-1.24-5.09-5.53 0-1.22.44-2.22 1.16-3-.12-.28-.5-1.42.11-2.96 0 0 .95-.3 3.12 1.15.9-.25 1.86-.38 2.82-.38.96 0 1.92.13 2.82.38 2.17-1.45 3.12-1.15 3.12-1.15.61 1.54.23 2.68.11 2.96.72.78 1.16 1.78 1.16 3 0 4.3-2.62 5.24-5.11 5.52.4.35.75 1.04.75 2.1 0 1.52-.01 2.75-.01 3.13 0 .29.2.64.77.53C19.05 20.9 22.25 16.7 22.25 11.76 22.25 5.48 17.27.5 12 .5z" fill="#e6eef6"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/luan-francisco-da-veiga/" target="_blank" rel="noopener" class="footer-social" aria-label="LinkedIn">
+        <!-- LinkedIn SVG -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zM8.5 8h3.83v2.18h.05c.53-1 1.83-2.18 3.76-2.18 4.02 0 4.77 2.64 4.77 6.08V24h-4V15.5c0-2.02-.04-4.63-2.82-4.63-2.82 0-3.25 2.2-3.25 4.48V24h-4V8z" fill="#e6eef6"/></svg>
+      </a>
+      <a href="https://x.com/lunfz_" target="_blank" rel="noopener" class="footer-social" aria-label="X">
+        <!-- X / Twitter SVG -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.162 5.656c-.66.295-1.37.494-2.11.582.76-.455 1.34-1.176 1.61-2.036-.71.42-1.49.724-2.32.89C18.7 4.08 17.8 3.5 16.77 3.5c-1.54 0-2.79 1.25-2.79 2.8 0 .22.03.44.07.64-2.32-.12-4.37-1.23-5.75-2.92-.24.41-.37.88-.37 1.38 0 .95.48 1.78 1.2 2.27-.56-.02-1.09-.17-1.55-.42v.04c0 1.34.95 2.46 2.21 2.72-.46.13-.95.2-1.46.2-.36 0-.72-.03-1.06-.1.72 2.26 2.82 3.9 5.3 3.95-1.95 1.52-4.4 2.42-7.06 2.42-.46 0-.9-.02-1.34-.08 2.53 1.62 5.53 2.57 8.75 2.57 10.49 0 16.22-8.69 16.22-16.23v-.74c1.12-.8 1.98-1.8 2.71-2.94-.99.44-2.06.74-3.16.87z" fill="#e6eef6"/></svg>
+      </a>
+    </div>
   </footer>
 
   <!-- Modal de certificações -->
@@ -79,84 +118,4 @@
 
   <script src="app.js"></script>
 </body>
-=======
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio de lunfz0</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Ir para o conteúdo</a>
-
-  <header class="site-header">
-    <nav class="nav" aria-label="Principal">
-      <div class="brand">
-        <h1>Luan Francisco</h1>
-        <p class="brand-sub">Portfolio & Currículo</p>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#certifications">Certificações</a></li>
-        <li><a href="#social">Redes</a></li>
-      </ul>
-    </nav>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-inner">
-        <h2 id="hero-title">Olá — eu sou Luan</h2>
-        <p>Sou Luan, estagiário em infraestrutura de TI com foco em automação, monitoramento e boas práticas de engenharia. Tenho experiência prática em suporte a sistemas, manutenção de servidores e processos de infraestrutura, e estou constantemente aprimorando meus conhecimentos em soluções escaláveis e modernas. Atualmente, estou me preparando para atuar na área de cloud computing, com ênfase em AWS e tecnologias de nuvem, buscando desenvolver habilidades técnicas avançadas e contribuir de forma efetiva em projetos de TI.</p>
-        <a class="cta" href="#certifications">Ver certificações</a>
-      </div>
-    </section>
-  </header>
-
-  <main id="main">
-    <section id="skills" class="card">
-      <h2>Skills</h2>
-      <ul>
-        <li>n8n (automação)</li>
-        <li>Cloud (AWS / Google)</li>
-        <li>Cibersegurança</li>
-        <li>Manutenção de PCs</li>
-      </ul>
-    </section>
-
-    <section id="social" class="card">
-      <h2>Redes Sociais</h2>
-      <p class="muted">Me acompanhe nas redes</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/luan-francisco-da-veiga/" target="_blank" rel="noopener" class="social-btn">LinkedIn</a>
-        <a href="https://github.com/lunfz" target="_blank" rel="noopener" class="social-btn">GitHub</a>
-        <a href="https://x.com/lunfz_" target="_blank" rel="noopener" class="social-btn">X / Twitter</a>
-      </div>
-    </section>
-
-    <section id="certifications" class="card">
-      <h2>Andamento das certificações</h2>
-      <div id="progress-container" class="cert-carousel" aria-live="polite">
-        <!-- Os cartões de andamento serão gerados pelo JS -->
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>Feito por lunfz0</p>
-  </footer>
-
-  <!-- Modal de certificações -->
-  <div id="cert-modal" class="modal" aria-hidden="true">
-    <div class="modal-overlay" data-close></div>
-    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" aria-label="Fechar" data-close>&times;</button>
-      <h3 id="modal-title">Atualização sobre certificações</h3>
-      <p>Embora ainda não possua certificações relevantes de mercado, estou estudando ativamente para conquistar a AWS CLF-C02 e outras certificações que reforcem minha qualificação na área de cloud computing.</p>
-    </div>
-  </div>
-
-  <script src="app.js"></script>
-</body>
->>>>>>> e20b26a96e3a6a8bff3e29dd8957dc352500642a
 </html>
