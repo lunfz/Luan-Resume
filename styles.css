@@ -204,13 +204,11 @@ main{max-width:1400px;margin:28px auto;display:grid;grid-template-columns:1fr;ga
 
 @media (max-width: 720px) {
   /* em telas menores, evite que o negative margin cause overlap — neutralizar */
-  #courses { margin-top: -50px; }
   #courses { margin-top: -140px; }
 }
 
 @media(min-width:1200px){
   /* telas bem largas: destaque maior sem quebrar o layout */
-  #courses{margin-top:-90px}
   #courses{margin-top:-180px}
 }
 
@@ -247,7 +245,7 @@ main{max-width:1400px;margin:28px auto;display:grid;grid-template-columns:1fr;ga
 /* removed progress container styles as progress UI was taken out */
 
 /* Courses list styling */
-.courses-wrap{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:12px;border-radius:10px}
+.courses-wrap{padding:12px;border-radius:10px}
 .courses-list{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
 .courses-list li{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:10px;color:var(--muted);font-weight:700;min-width:150px;flex:1 1 150px}
 #skills{border-bottom:1px solid rgba(255,255,255,0.03);padding-bottom:12px;margin-bottom:8px}
