@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 [
   {
     "title": "AWS Cloud Practitioner",
@@ -13,19 +13,4 @@
     "progress": 75
   }
 ]
-=======
-[
-  {
-    "title": "AWS Cloud Practitioner",
-    "progress": 15
-  },
-  {
-    "title": "n8n - Automação de Processos",
-    "progress": 20
-  },
-  {
-    "title": "Inglês",
-    "progress": 75
-  }
-]
->>>>>>> e20b26a96e3a6a8bff3e29dd8957dc352500642a
+
