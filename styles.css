@@ -1,266 +1,425 @@
-:root{
-  /* Define a cor de fundo principal */
-  --bg:#0f1724;
-  /* Define a cor de fundo dos cards */
-  --card:#0f1724;
-  /* Define uma cor para textos mais discretos */
-  --muted:#9fb0c8;
-  /* Define a cor de destaque (roxo) */
-  --accent:#7c3aed;
-  /* Define uma versão transparente da cor de destaque para efeitos de aura */
-  --accent-aura: rgba(124,58,237,0.12);
-  /* Define a cor da superfície */
-  --surface:#0f1724;
-  /* Define a cor do painel */
-  --panel:#111827;
-  /* Define o raio dos cantos arredondados */
-  --radius:12px;
-  /* Define um efeito de vidro com transparência */
-  --glass: rgba(255,255,255,0.03);
+:root {
+  --bg: #0f1724;
+  --card: #0f1724;
+  --muted: #9fb0c8;
+  --accent: #7c3aed;
+  --accent-aura: rgba(124, 58, 237, 0.12);
+  --surface: #0f1724;
+  --panel: #111827;
+  --radius: 12px;
+  --glass: rgba(255, 255, 255, 0.03);
 }
 
-/* Aplica o modelo de caixa "border-box" a todos os elementos */
-*{box-sizing:border-box}
-/* Estilos para o corpo da página */
-body{
-  /* Define a família da fonte */
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  /* Aplica um gradiente linear como fundo */
   background: linear-gradient(180deg, #071025 0%, var(--bg) 100%);
-  /* Define a cor do texto */
   color: #e6eef6;
-  /* Remove as margens padrão */
-  margin:0;
-  /* Adiciona preenchimento ao redor do conteúdo */
-  padding:20px;
-  /* Melhora a suavização da fonte em navegadores WebKit (Chrome, Safari) */
-  -webkit-font-smoothing:antialiased;
-  /* Melhora a suavização da fonte no Firefox */
-  -moz-osx-font-smoothing:grayscale;
+  margin: 0;
+  padding: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Estilos para o link de "skip navigation" */
-.skip-link{
-  /* Posiciona o link fora da tela */
-  position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
-/* Estilos para quando o link de "skip navigation" recebe foco */
-.skip-link:focus{left:12px;top:12px;width:auto;height:auto;padding:8px;background:#fff;color:#000;border-radius:6px}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+  width: auto;
+  height: auto;
+  padding: 8px;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+}
 
-/* Estilos para o cabeçalho do site */
-.site-header{max-width:1400px;margin:0 auto}
-/* Estilos para a navegação */
-.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 4px}
-/* Estilos para o título da marca */
-.brand h1{margin:0;font-size:20px}
-/* Estilos para o subtítulo da marca */
-.brand-sub{margin:0;font-size:12px;color:var(--muted)}
-/* Estilos para a lista de links de navegação */
-.nav-links{list-style:none;margin:0;padding:0;display:flex;gap:12px}
-/* Estilos para os links de navegação */
-.nav-links a{color:var(--muted);text-decoration:none;padding:8px;border-radius:8px}
-/* Estilos para quando os links de navegação são hovered ou focados */
-.nav-links a:hover,.nav-links a:focus{background:var(--glass);color:var(--accent);outline:none}
+/* Header & Nav */
+.site-header {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 4px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.brand h1 {
+  margin: 0;
+  font-size: 20px;
+}
+.brand-sub {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 8px;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+  background: var(--glass);
+  color: var(--accent);
+  outline: none;
+}
 
-/* Estilos para a seção Hero */
-.hero{background:linear-gradient(90deg, rgba(124,58,237,0.12), rgba(2,6,23,0.2));padding:30px;border-radius:var(--radius);margin-top:8px}
-/* Estilos internos da seção Hero */
-.hero-inner{max-width:900px;margin:0;padding-left:8px;text-align:left}
-/* Estilos para o título da seção Hero */
-.hero h2{font-size:28px;margin:0 0 8px}
-/* Estilos para o parágrafo da seção Hero */
-.hero p{color:var(--muted);margin:0 0 16px}
-/* Estilos para o botão de call to action */
-.cta{display:inline-block;background:var(--accent);color:white;padding:10px 16px;border-radius:10px;text-decoration:none}
-/* Estilos para quando o botão de call to action recebe foco */
-.cta:focus{outline:3px solid rgba(124,58,237,0.25)}
+/* Hero section */
+.hero {
+  background: linear-gradient(90deg, rgba(124, 58, 237, 0.12), rgba(2, 6, 23, 0.2));
+  padding: 30px;
+  border-radius: var(--radius);
+  margin-top: 8px;
+}
+.hero-inner {
+  max-width: 900px;
+  margin: 0;
+  padding-left: 0;
+  text-align: left;
+}
+.hero h2 {
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+.hero p {
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.cta:focus {
+  outline: 3px solid rgba(124, 58, 237, 0.25);
+}
 
-/* Estilos para a classe main-tight */
+/* Main structure */
+main,
 .main-tight {
-  /* Define a largura máxima do conteúdo */
-  max-width:1400px;margin:18px auto;display:grid;grid-template-columns:1fr;gap:10px;align-items:start
+  max-width: 1400px;
+  margin: 28px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: start;
 }
-/* Estilos para a tag <main> */
-main{max-width:1400px;margin:28px auto;display:grid;grid-template-columns:1fr;gap:10px;align-items:start}
-/* Estilos para os cards */
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
 
-/* Estilos para a seção de Skills */
-#skills ul{list-style:none;padding:0;margin:12px 0;display:flex;flex-wrap:wrap;gap:10px}
-/* Estilos para a lista de skills */
-#skills .skills-list{list-style:none;padding:0;margin:12px 0;display:flex;flex-wrap:wrap;gap:10px}
-/* Estilos para cada item da lista de skills */
-#skills .skill-item{background:#0b1524;color:var(--muted);padding:10px 14px;border-radius:999px;font-weight:700;display:flex;align-items:center;gap:10px}
-/* Estilos para o nível de skill */
-.skill-level{background:rgba(255,255,255,0.03);color:var(--muted);padding:4px 8px;border-radius:8px;font-size:12px;font-weight:700}
+/* Cards */
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+}
 
-/* Hover / focus aura for skill pills */
-/* Aplica estilos de "aura" em elementos como skill-item, soft-skills e courses-list */
+/* Skills */
+#skills {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill-item {
+  background: #0b1524;
+  color: var(--muted);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto; /* deixa fluido */
+  max-width: max-content; /* não estoura largura */
+  box-sizing: border-box;
+  gap: 10px;
+}
+.skill-level {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Aura hover effects */
 .skill-item,
 .soft-skills li,
-.courses-list li{
-  /* Define a posição como relativa para permitir o posicionamento absoluto do pseudo-elemento ::after */
-  position:relative;transition:box-shadow 220ms ease, transform 220ms ease, background-color 220ms ease;
+.courses-list li {
+  position: relative;
+  transition: box-shadow 220ms ease, transform 220ms ease, background-color 220ms ease;
 }
-/* Cria um pseudo-elemento ::after para adicionar um efeito visual */
 .skill-item::after,
 .soft-skills li::after,
-.courses-list li::after{
-  /* Define o conteúdo como vazio, necessário para o pseudo-elemento existir */
-  content:'';position:absolute;inset:-6px;border-radius:12px;pointer-events:none;opacity:0;transition:opacity 220ms ease, transform 220ms ease;
-  /* Adiciona uma sombra ao redor do elemento, usando a cor definida em --accent-aura */
+.courses-list li::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 220ms ease, transform 220ms ease;
   box-shadow: 0 8px 20px var(--accent-aura);
 }
-/* Estilos a serem aplicados quando o mouse passa por cima ou o elemento está focado */
 .skill-item:hover::after,
-.skill-item:focus-within::after,
 .soft-skills li:hover::after,
-.soft-skills li:focus::after,
-.courses-list li:hover::after,
-.courses-list li:focus::after{
-  /* Define a opacidade como 1 para tornar o pseudo-elemento visível */
-  opacity:1;transform:translateY(-2px);
+.courses-list li:hover::after {
+  opacity: 1;
+  transform: translateY(-2px);
 }
-/* Aplica uma transformação de deslocamento vertical quando o mouse passa por cima */
-.skill-item:hover,.soft-skills li:hover,.courses-list li:hover{transform:translateY(-2px)}
-/* Adiciona um contorno quando o elemento está focado */
-.skill-item:focus-within,.soft-skills li:focus,.courses-list li:focus{outline:3px solid rgba(124,58,237,0.08);outline-offset:4px}
+.skill-item:hover,
+.soft-skills li:hover,
+.courses-list li:hover {
+  transform: translateY(-2px);
+}
 
 /* Soft skills */
-/* Estilos para o subheading */
-.subheading{margin-top:16px;margin-bottom:8px;color:#eaf2ff;font-size:16px}
-/* Estilos para a lista de soft skills */
-.soft-skills{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-/* Estilos para cada item da lista de soft skills */
-.soft-skills li{background:rgba(255,255,255,0.02);padding:10px;border-radius:10px;color:var(--muted);font-weight:600}
-
-/* soft-card: keep consistent with other cards but slightly compact */
-/* Estilos para o card de soft skills */
-.soft-card{display:flex;flex-direction:column;gap:12px}
-/* Estilos para a lista de soft skills dentro do card */
-.soft-card .soft-skills{margin-top:6px}
-
-
-/* Estilos para a classe muted */
-.muted{color:var(--muted);font-size:14px}
-
-/* Regras de barras de progresso removidas: o layout agora não exibe elementos de andamento dinâmico.
-  Se você quiser restaurar o visual de progresso no futuro, remova este comentário e
-  recupere as regras anteriores para .progress-bar, .progress-bar-inner, .progress-item, etc. */
-
-/* Estilos para o rodapé do site */
-.site-footer{max-width:1000px;margin:28px auto;text-align:center;color:var(--muted);font-size:14px}
-
-/* Estilos para os sociais do rodapé */
-.footer-socials{display:flex;gap:12px;justify-content:center;margin-top:10px}
-/* Estilos para cada link social no rodapé */
-.footer-social{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.03);text-decoration:none}
-/* Estilos para o SVG dentro do link social */
-.footer-social svg{display:block}
-
-/* ajustamentos de espaçamento */
-/* Remove a margem superior da seção de certificações */
-#certifications{margin-top:0}
-/* Remove a margem superior do card de soft skills */
-.soft-card{margin-top:0}
-/* make courses a bit more compact so footer moves up */
-/* Remove a margem superior da seção de cursos, define uma altura mínima e exibe como bloco */
-#courses{margin-top:0;min-height:120px;display:block}
-/* Define a margem inferior dos títulos
-.card h2{margin-bottom:12px}
-.courses-wrap{display:flex;align-items:flex-start;justify-content:flex-start;flex-wrap:wrap;width:100%;padding:6px;}
-
-@media(min-width:800px){
-  /* grid com áreas para posicionar visualmente os blocos sem mudar o DOM */
-  main{grid-template-columns:3fr 1fr;grid-template-areas:"skills soft" "courses soft";gap:16px}
-  #skills{grid-area:skills}
-  #courses{grid-area:courses;grid-column:1/2}
-  #soft-skills{grid-area:soft}
-  .hero-inner{text-align:left}
-  /* ensure courses content starts at the top of the card (no large empty area) */
-  #courses .courses-wrap{display:flex;align-items:flex-start;flex-wrap:wrap}
-  #courses{min-height:0}
+.subheading {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  color: #eaf2ff;
+  font-size: 16px;
+}
+.soft-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.soft-skills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.soft-skills li {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--muted);
+  font-weight: 600;
 }
 
-@media(max-width:1024px){
-  /* slightly smaller on medium screens */
-  #courses{min-height:140px}
+/* Courses */
+.courses-wrap {
+  padding: 12px;
+  border-radius: 10px;
+}
+.courses-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* garante quebra de linha */
+  flex-wrap: wrap;
+  gap: 12px; /* espaço uniforme */
+}
+.courses-list li {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 12px;
+  border-radius: 10px;
+  color: var(--muted);
+  font-weight: 700;
+  flex: 1 1 220px; /* largura mínima consistente */
+  max-width: 300px; /* limite máximo */
+  box-sizing: border-box;
 }
 
-@media(max-width:720px){
-  #courses{min-height:120px}
-  .courses-wrap{align-items:flex-start}
+/* Certificações */
+.cert-grid {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.cert-extra {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.01);
+  padding: 12px;
+  border-radius: 10px;
 }
 
-@media(max-width:420px){
-  .hero h2{font-size:20px}
-  .cta{padding:8px 12px}
+/* Footer */
+.site-footer {
+  max-width: 1000px;
+  margin: 28px auto;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
 }
 
-@media(max-width:720px){
-  /* em telas menores, evite que o negative margin cause overlap — neutralizar */
-  #courses{margin-top:0}
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.modal[aria-hidden="false"] {
+  pointer-events: auto;
+}
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.75));
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 220ms;
+}
+.modal[aria-hidden="false"] .modal-overlay {
+  opacity: 1;
+}
+.modal-content {
+  position: relative;
+  z-index: 10;
+  max-width: 720px;
+  width: 90%;
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.08), rgba(255, 255, 255, 0.02));
+  border-radius: 12px;
+  padding: 20px;
+  color: #eaf2ff;
+  transform: translateY(8px) scale(0.98);
+  opacity: 0;
+  transition: opacity 220ms, transform 220ms, box-shadow 220ms;
+  box-shadow: 0 12px 40px rgba(2, 6, 23, 0.6);
+}
+.modal[aria-hidden="false"] .modal-content {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  font-size: 28px;
+  cursor: pointer;
 }
 
-@media (max-width: 720px) {
-  /* em telas menores, evite que o negative margin cause overlap — neutralizar */
-  #courses { margin-top: -140px; }
+/* ===== MEDIA QUERIES ===== */
+
+/* Telas pequenas (celulares) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 20px;
+  }
+  .hero h2 {
+    font-size: 20px;
+  }
+  .courses-list li {
+    flex: 1 1 100%; /* ocupa 100% no celular */
+    max-width: 100%;
+  }
+  .skill-item {
+    flex: 1 1 100%; /* skills também ocupam largura inteira */
+    justify-content: center;
+  }
 }
 
-@media(min-width:1200px){
-  /* telas bem largas: destaque maior sem quebrar o layout */
-  #courses{margin-top:-180px}
+
+/* Tablets e pequenos laptops */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .hero h2 {
+    font-size: 22px;
+  }
+  .courses-list li {
+    min-width: 160px;
+  }
 }
 
-@media (prefers-reduced-motion: reduce){
+/* Layout desktop */
+@media (min-width: 800px) {
+  main {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "skills soft"
+      "courses soft";
+    gap: 16px;
+  }
+  #skills {
+    grid-area: skills;
+  }
+  #courses {
+    grid-area: courses;
+  }
+  #soft-skills {
+    grid-area: soft;
+  }
+}
+
+/* Telas muito largas */
+@media (min-width: 1200px) {
+  #courses {
+    margin-top: -60px;
+  }
+}
+
+/* Redução de movimento */
+@media (prefers-reduced-motion: reduce) {
   .skill-item,
   .soft-skills li,
   .courses-list li,
   .skill-item::after,
   .soft-skills li::after,
-  .courses-list li::after{transition:none;transform:none}
+  .courses-list li::after {
+    transition: none;
+    transform: none;
+  }
 }
-
-/* Social links */
-.social-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-.social-btn{background:rgba(255,255,255,0.03);color:var(--muted);padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,0.03)}
-.social-btn:hover,.social-btn:focus{background:var(--accent);color:white;transform:translateY(-2px);box-shadow:0 8px 24px rgba(2,6,23,0.6);outline:none}
-
-@media(max-width:520px){
-  .social-links{flex-direction:column}
-  .social-btn{width:100%;text-align:center}
-}
-
-/* Certificações grid */
-.cert-grid{display:flex;gap:18px;align-items:flex-start;margin-top:12px}
-.cert-extra{flex:1;background:rgba(255,255,255,0.01);padding:12px;border-radius:10px}
-.card h2{font-size:20px;text-align:left;margin:0 0 8px}
-
-.card{padding:14px}
-
-@media(max-width:900px){
-  .cert-grid{flex-direction:column}
-}
-
-/* removed progress container styles as progress UI was taken out */
-
-/* Courses list styling */
-.courses-wrap{padding:12px;border-radius:10px}
-.courses-list{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
-.courses-list li{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:10px;color:var(--muted);font-weight:700;min-width:150px;flex:1 1 150px}
-#skills{border-bottom:1px solid rgba(255,255,255,0.03);padding-bottom:12px;margin-bottom:8px}
-
-@media(max-width:720px){
-  .courses-list li{min-width:160px;flex:1 1 160px}
-}
-
-/* Modal de certificações */
-.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
-.modal[aria-hidden="false"]{pointer-events:auto}
-.modal-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.75));backdrop-filter:blur(6px);opacity:0;transition:opacity 220ms}
-.modal[aria-hidden="false"] .modal-overlay{opacity:1}
-.modal-content{position:relative;z-index:10;max-width:720px;width:90%;background:linear-gradient(180deg, rgba(124,58,237,0.08), rgba(255,255,255,0.02));border-radius:12px;padding:20px;color:#eaf2ff;transform:translateY(8px) scale(0.98);opacity:0;transition:opacity 220ms,transform 220ms,box-shadow 220ms;box-shadow:0 12px 40px rgba(2,6,23,0.6)}
-.modal[aria-hidden="false"] .modal-content{opacity:1;transform:translateY(0) scale(1)}
-.modal-close{position:absolute;right:12px;top:10px;background:transparent;border:0;color:var(--muted);font-size:28px;cursor:pointer}
-.modal h3{margin:0 0 8px}
-.modal p{margin:0;color:var(--muted);line-height:1.4}
