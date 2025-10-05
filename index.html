@@ -16,16 +16,17 @@
         <h1>Luan Francisco</h1>
         <p class="brand-sub">Portfolio & Currículo</p>
       </div>
-      <ul class="nav-links">
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#certifications">Certificações</a></li>
-      </ul>
+      <!-- Substitua seu-email@example.com pelo seu e-mail -->
+      <a href="mailto:seu-email@example.com" class="cta nav-cta">Entre em contato</a>
     </nav>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-inner">
         <h2 id="hero-title">Olá — eu sou Luan</h2>
         <p>Sou Luan, estagiário em infraestrutura de TI com foco em automação, monitoramento e boas práticas de engenharia. Tenho experiência prática em suporte a sistemas, manutenção de servidores e processos de infraestrutura, e estou constantemente aprimorando meus conhecimentos em soluções escaláveis e modernas. Atualmente, estou me preparando para atuar na área de cloud computing, com ênfase em AWS e tecnologias de nuvem, buscando desenvolver habilidades técnicas avançadas e contribuir de forma efetiva em projetos de TI.</p>
-        <a class="cta" href="#certifications">Ver certificações</a>
+        <div class="hero-actions">
+          <a class="cta" id="cert-cta" href="#">Ver certificações</a>
+          <a class="cta" id="projects-cta" href="#">Projetos</a>
+        </div>
       </div>
     </section>
   </header>
@@ -67,7 +68,7 @@
           <li>AWS Cloud Practitioner Essentials</li>
           <li>CISCO - Defesa de Rede</li>
           <li>Introduction to Network Analysis</li>
-          <li>Fundamentos de DevOps: DevSecOps [Legendado]</li>
+          <li>Fundamentos de DevOps: DevSecOps </li>
           <li>CISCO - Networking Basics</li>
           <li>CISCO - Computer Hardware Basics</li>
           <li>CISCO - Introduction to IoT and Digital Transformation</li>
@@ -113,5 +114,22 @@
   </div>
 
   <script src="app.js"></script>
+
+  <!-- Modal de Projetos -->
+  <div id="projects-modal" class="modal" aria-hidden="true">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="projects-modal-title">
+      <button class="modal-close" aria-label="Fechar" data-close>&times;</button>
+      <h3 id="projects-modal-title">Projetos</h3>
+      <div class="projects-grid">
+        <a href="https://google.com" target="_blank" rel="noopener" class="project-item">Automações - N8N</a>
+        <a href="https://google.com" target="_blank" rel="noopener" class="project-item">Cloud Computing- AWS</a>
+        <a href="https://google.com" target="_blank" rel="noopener" class="project-item">A DEFINIR</a>
+        <a href="https://google.com" target="_blank" rel="noopener" class="project-item">A DEFINIR</a>
+        <a href="https://google.com" target="_blank" rel="noopener" class="project-item">A DEFINIR</a>
+        <a href="https://google.com" target="_blank" rel="noopener" class="project-item">A DEFINIR</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

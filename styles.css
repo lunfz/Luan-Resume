@@ -89,6 +89,11 @@ body {
   outline: none;
 }
 
+/* Estilo para o botão de contato na navegação */
+.nav-cta {
+  padding: 8px 14px;
+}
+
 /* Hero section */
 .hero {
   background: linear-gradient(90deg, rgba(124, 58, 237, 0.12), rgba(2, 6, 23, 0.2));
@@ -120,6 +125,18 @@ body {
 }
 .cta:focus {
   outline: 3px solid rgba(124, 58, 237, 0.25);
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.cta-secondary {
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* Main structure */
@@ -352,6 +369,27 @@ main,
   font-size: 28px;
   cursor: pointer;
 }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.project-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: background 220ms ease, transform 220ms ease;
+}
+.project-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transform: translateY(-2px);
+}
 
 /* ===== MEDIA QUERIES ===== */
 
@@ -407,7 +445,7 @@ main,
 /* Telas muito largas */
 @media (min-width: 1200px) {
   #courses {
-    margin-top: -60px;
+    margin-top: -50px;
   }
 }
 
